@@ -1,0 +1,77 @@
+<% for(var i = 0; i < users.length; i++) { %>
+<tr>
+    <td><%= i + 1 %></td>
+    <td><%= users[i].depid %></td>
+
+    <td><%= users[i].name %></td>
+    <td><%= users[i].position %></td>
+
+
+    <td>
+    
+        <div class="wrapper">
+            <div class="icon facebook">
+                <div class="tooltip">
+                    <%= users[i].email %> 
+
+                </div>
+                <span class="material-symbols-outlined">
+                    contact_mail
+                </span> 
+            </div>
+
+
+            <div class="wrapper">
+                <div class="icon facebook">
+                    <div class="tooltip">
+                        <%= users[i].email %> 
+    
+                    </div>
+                   <span id="emailp"> <%= users[i].email %> </span>
+                </div>
+            
+    </td>
+    <td><%= users[i].Phoneno %></td>
+    <td><%= users[i].gender %></td>
+    <td><%= users[i].status %></td>
+    <td><%= users[i].salaryy %></td>
+
+    
+        <td>
+    
+            <div class="wrapper1">
+                <div class="icon1 facebook">
+                    <div class="tooltip1">
+                        <b> Details </b>  <br/>
+                         Age :  <%= users[i].age %> <br/> 
+                         Pincode :  <%= users[i].pincode %>  <br/>
+                        Blood grp :  <%= users[i].bloodg %> <br/>
+                          Disability :  <%= users[i].diable %> <br/> 
+                          Bank acc. :  <%= users[i].accno %> <br/>
+                       Address :  <%= users[i].address %> <br/>
+                    
+                    </div>
+                    <span class="material-symbols-outlined">
+                        contact_mail
+                    </span> 
+                </div>
+    
+    
+            
+        </td>
+
+        <style>
+            #pencil:hover {
+                background-color: #ffebcd;
+            }
+        </style>
+       <td>
+        <a href="/update-user?id=<%= users[i]._id%>" class="btn border-shadow update" id="pencil">
+            <span class="text-gradient" id="pencil"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a class="btn border-shadow delete" data-id='<%= users[i]._id%>' id="pencil" >
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>
